@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}*/
+
+
+/*ANIMACION PARA LOS LOGOS DE LOS LENGUAJES*/
+
+.scroll-logos-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scroll-logos {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+  gap: 2.5rem;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+

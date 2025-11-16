@@ -7,7 +7,7 @@ export const proyectos = [
     imagen: "/img/bibliosys/1.png",         // portada en la grilla
     demo: "/proyectos/bibliosys",            // << demo interna
     codigo: "https://github.com/denis24-rgb/bibliosys",
-    video: "/videos/bibliosys.mp4",          // opcional (borra si no usas)
+    video: "https://www.youtube.com/embed/uPZOWcAnbgE",          // opcional (borra si no usas)
     imagenes: [
       "/img/bibliosys/1.png",
       "/img/bibliosys/2.png",
@@ -28,7 +28,7 @@ export const proyectos = [
   imagen: "/img/reportes/1.jpg",           // portada que se verá en la grilla
   demo: "/proyectos/app-reportes",          // ruta interna
   codigo: "https://github.com/denis24-rgb/seguridad_ciudadana/tree/main/report_app", // enlace a GitHub
-  video: "/videos/reportes.mp4",            // opcional
+  video: "https://www.youtube.com/embed/EhKWGAWGqAY",            // opcional
   imagenes: [
     "/img/reportes/1.jpg",
     "/img/reportes/2.jpg",

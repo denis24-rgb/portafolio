@@ -48,13 +48,18 @@ export default function ProyectoDemo() {
         {/* Video (opcional) */}
         {proyecto.video && (
           <div className="mt-8">
-            <video
-              src={proyecto.video}
-              controls
-              className="w-full max-w-5xl rounded-lg shadow-lg mx-auto"
-            />
+            <div className="aspect-video max-w-5xl mx-auto">
+              <iframe
+                src={proyecto.video} // usa la URL de EMBED, ej: https://www.youtube.com/embed/ABC123XYZ
+                title={proyecto.titulo}
+                className="w-full h-full rounded-lg shadow-lg"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         )}
+
 
         {/* Highlights / features */}
         {proyecto.features?.length > 0 && (

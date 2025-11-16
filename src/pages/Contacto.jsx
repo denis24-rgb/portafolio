@@ -1,7 +1,6 @@
-// src/pages/Contacto.jsx
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-import { FaWhatsapp, FaEnvelope, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Contacto() {
   const form = useRef();
@@ -12,10 +11,9 @@ function Contacto() {
 
     emailjs
       .sendForm(
-        "service_syl3yy2",     // 🔁 remplaza
-        "template_cuap7ku",    // 🔁 remplaza
-        form.current,
-        "LxprxsTXKmlHmt0Ex"      // 🔁 remplaza
+        "service_syl3yy2",
+        "template_cuap7ku",
+        "LxprxsTXKmlHmt0Ex"
       )
       .then(
         (result) => {
@@ -45,14 +43,14 @@ function Contacto() {
             <input
               type="text"
               name="name"
-              placeholder="Nombre"
+              placeholder="Su nombre"
               className="bg-[#0f172a] border border-cyan-700 p-3 rounded-md text-white placeholder-gray-400"
               required
             />
             <input
               type="email"
               name="email"
-              placeholder="Correo electrónico"
+              placeholder="Su correo electrónico"
               className="bg-[#0f172a] border border-cyan-700 p-3 rounded-md text-white placeholder-gray-400"
               required
             />
@@ -115,7 +113,14 @@ function Contacto() {
             >
               <FaFacebook />
             </a>
-
+            <a
+              href="https://www.linkedin.com/in/denis-guarayo-b44b7837b"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-sky-700 text-white hover:bg-sky-800 transform transition-transform duration-300 hover:scale-110"
+            >
+              <FaLinkedin />
+            </a>
             <a
               href="https://github.com/denis24-rgb"
               target="_blank"
@@ -125,8 +130,6 @@ function Contacto() {
               <FaGithub />
             </a>
           </div>
-
-
         </div>
       </div>
     </section>

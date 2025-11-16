@@ -56,7 +56,7 @@ export default function Home() {
             <span className="text-lg font-semibold text-white">Contáctame:</span>
           </div>
           <a
-            href="https://wa.me/59171020304?text=Hola%20Denis%2C%20vi%20tu%20portafolio%20y%20quiero%20contactarte."
+            href="https://wa.me/59163516136?text=Hola%20Denis%2C%20vi%20tu%20portafolio%20y%20quiero%20contactarte."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-gray-300 hover:text-[#00d9c0] transition-colors duration-300"

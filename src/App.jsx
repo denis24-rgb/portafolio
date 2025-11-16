@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import SobreMi from './pages/SobreMi';
 import Proyectos from './pages/Proyectos';
 import Contacto from './pages/Contacto';
+import ProyectoDemo from "./pages/ProyectoDemo";
 
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/sobre-mi" element={<SobreMi />} />
             <Route path="/proyectos" element={<Proyectos />} />
+             <Route path="/proyectos/:slug" element={<ProyectoDemo />} />
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </main>

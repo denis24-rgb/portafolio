@@ -22,7 +22,7 @@
 }
 
 .animate-float {
-  animation: float 4s ease-in-out infinite;
+  animation: float cubic-bezier(0.47, 0, 0.745, 0.715) ease-in-out infinite;
 }*/
 
 

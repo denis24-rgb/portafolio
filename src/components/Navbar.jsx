@@ -32,8 +32,8 @@ function Navbar() {
           className="flex items-center gap-2 text-xl font-bold"
           style={{ color: '#00d9c0' }}
         >
-          <FaCog className="animate-spin-slow" />
-          Denis Martínez
+          <FaCog className="text-2xl animate-spin" />
+          Dev Martinez
         </Link>
 
         <div className="hidden md:flex items-center space-x-6">

@@ -1,52 +1,42 @@
 // src/pages/Proyectos.jsx
+import { Link } from "react-router-dom";
+import { proyectos } from "../data/proyectos";
 
-import React from "react";
-
-function Proyectos() {
+export default function Proyectos() {
   return (
-    <section className="min-h-screen px-6 py-16 bg-gradient-to-b from-[#0f172a] to-[#020617] text-white">
-      <h1
-        className="text-4xl font-bold mb-12 text-center text-cyan-400"
-        data-aos="fade-up"
-      >
-        Mis Proyectos
-      </h1>
+    <section className="min-h-screen px-6 py-12 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+      <h2 className="text-4xl font-bold text-center mb-8">Mis Proyectos</h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div
-          className="bg-[#1e293b] border border-cyan-700 p-6 rounded-lg shadow-md hover:shadow-cyan-500/20 transition duration-300 hover:scale-105"
-          data-aos="fade-up"
-        >
-          <h2 className="text-xl font-semibold text-cyan-400">Proyecto 1</h2>
-          <p className="text-gray-300 mt-2">
-            Una breve descripción del primer proyecto.
-          </p>
-        </div>
-
-        <div
-          className="bg-[#1e293b] border border-cyan-700 p-6 rounded-lg shadow-md hover:shadow-cyan-500/20 transition duration-300 hover:scale-105"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h2 className="text-xl font-semibold text-cyan-400">Proyecto 2</h2>
-          <p className="text-gray-300 mt-2">
-            Una breve descripción del segundo proyecto.
-          </p>
-        </div>
-
-        <div
-          className="bg-[#1e293b] border border-cyan-700 p-6 rounded-lg shadow-md hover:shadow-cyan-500/20 transition duration-300 hover:scale-105"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h2 className="text-xl font-semibold text-cyan-400">Proyecto 3</h2>
-          <p className="text-gray-300 mt-2">
-            Una breve descripción del tercer proyecto.
-          </p>
-        </div>
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {proyectos.map((p) => (
+          <div
+            key={p.slug}
+            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img src={p.imagen} alt={p.titulo} className="w-full h-48 object-cover" />
+            <div className="p-5">
+              <h3 className="text-2xl font-semibold mb-2">{p.titulo}</h3>
+              <p className="text-gray-300 mb-4 line-clamp-3">{p.descripcion}</p>
+              <div className="flex gap-3">
+                <Link
+                  to={p.demo} // ← navega adentro
+                  className="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition"
+                >
+                  Ver Demo
+                </Link>
+                <a
+                  href={p.codigo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition"
+                >
+                  Código
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
-
-export default Proyectos;
